@@ -49,7 +49,7 @@ const HeaderBar = () => {
           top: 0,
           zIndex: 1000,
           height: 120,
-          backgroundColor: "#fffac3",
+          backgroundColor: "#F0ECE5",
         }}
       >
         {/* Sol alan: boş, ama flex:1 */}

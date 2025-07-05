@@ -4,43 +4,42 @@ import ColorThief from "colorthief";
 
 const { Title } = Typography;
 
-
 const cardData = [
   {
     title: "Kart 1",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
     image: "/logos/uzmanAutomotive1.png",
-    link: "https://uzmanllc.com",
+    link: "https://www.uzmandizel.com.tr/",
   },
   {
     title: "Kart 2",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
     image: "/logos/jaltest_logo_1.png",
-    link: "https://uzmanllc.com",
+    link: "https://www.jaltestturkiye.com/",
   },
   {
     title: "Kart 3",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
     image: "/logos/AGV-TECHNIC-LOGO-1-1.png",
-    link: "https://uzmanllc.com",
+    link: "https://www.agvtechnic.com.tr/",
   },
   {
-    title: "Kart 2",
+    title: "Kart 4",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
     image: "/logos/allynav_turkiye_logo-03.png",
-    link: "brand1.png",
+    link: "https://www.allynavturkiye.com/",
   },
   {
-    title: "Kart 3",
+    title: "Kart 5",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
     image: "/logos/uznav-logo-2.png",
-    link: "https://uzmanllc.com",
+    link: "https://www.uznav.com/",
   },
   {
-    title: "Kart 3",
+    title: "Kart 6",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
     image: "/logos/naubilis-1.png",
-    link: "https://uzmanllc.com",
+    link: "http://www.naubilis.com/",
   },
 ];
 
@@ -61,15 +60,16 @@ const imgStyle = {
   transition: "transform 0.4s ease",
 };
 
-function mixWithWhite(r, g, b, weight = 0.85) {
+// RGB'den RGBA şeffaf renk üretici
+function mixWithWhite(r, g, b, weight = 0.85, alpha = 0.5) {
   const newR = Math.round(r + (255 - r) * weight);
   const newG = Math.round(g + (255 - g) * weight);
   const newB = Math.round(b + (255 - b) * weight);
-  return `rgb(${newR}, ${newG}, ${newB})`;
+  return `rgba(${newR}, ${newG}, ${newB}, ${alpha})`;
 }
 
 const Home = () => {
-  const [bgColors, setBgColors] = useState(Array(cardData.length).fill("white"));
+  const [bgColors, setBgColors] = useState(Array(cardData.length).fill("rgba(255, 255, 255, 0.5)"));
 
   const handleMouseEnter = (e) => {
     e.currentTarget.querySelector("img").style.transform = "scale(1.1)";
@@ -86,10 +86,10 @@ const Home = () => {
     if (img.complete) {
       try {
         const [r, g, b] = colorThief.getColor(img);
-        const softColor = mixWithWhite(r, g, b, 0.85);
+        const softTransparentColor = mixWithWhite(r, g, b);
         setBgColors((prev) => {
           const newColors = [...prev];
-          newColors[index] = softColor;
+          newColors[index] = softTransparentColor;
           return newColors;
         });
       } catch (error) {
@@ -99,15 +99,13 @@ const Home = () => {
   };
 
   return (
-
-    
-
-
-    <div style={{ padding: "2rem", backgroundColor: "white", minHeight: "auto" }}>
-      {/* Kartları saran koyu mavi arka plan */}
+    <div style={{ padding: "1rem", backgroundColor: "white", minHeight: "auto" }}>
       <div
         style={{
-          backgroundColor: "#001529",
+          backgroundImage: "url('/logos/background8.png')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
           padding: "2rem",
           borderRadius: "1px",
           maxWidth: "2300px",
@@ -129,11 +127,16 @@ const Home = () => {
                 hoverable
                 style={{
                   width: "100%",
+                  border: "none",
+                  outline: "none",
+                  boxShadow: "none",
                   maxWidth: 320,
                   backgroundColor: bgColors[index],
                   borderRadius: "8px",
+                backdropFilter: "blur(10px)", // isteğe bağlı: cam efekti
+                  //boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
                 }}
-                bodyStyle={{ padding: "1rem" }}
+                bodyStyle={{ padding: "2rem" }}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -145,15 +148,15 @@ const Home = () => {
                       style={imgStyle}
                       crossOrigin="anonymous"
                       onLoad={(e) => handleImageLoad(index, e)}
+                      onClick={() => window.open(card.link, "_blank")}
                     />
                   </div>
-                  <Title level={5} style={{ textAlign: "center", margin: 0 }}>
+                  {/* <Title level={5} style={{ textAlign: "center", margin: 0 }}>
                     {card.title}
-                  </Title>
-                  {/* <p style={{ textAlign: "center", marginBottom: 0 }}>{card.description}</p> */}
+                  </Title> */}
                   <Button color="default" variant="filled">
-            Daha Fazla
-          </Button>
+                    Daha Fazla
+                  </Button>
                 </Space>
               </Card>
             </Col>
@@ -165,4 +168,3 @@ const Home = () => {
 };
 
 export default Home;
-  
