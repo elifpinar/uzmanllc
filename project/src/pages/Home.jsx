@@ -65,12 +65,6 @@ const cardData = [
     image: "/logos/doktormarinlogo.png",
     link: "http://www.naubilis.com/",
   },
-  {
-    title: "Kart 10",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/uzmandanismanliklogo.png",
-    link: "http://www.naubilis.com/",
-  },
 ];
 
 const imgContainerStyle = {
@@ -80,7 +74,7 @@ const imgContainerStyle = {
   justifyContent: "center",
   alignItems: "center",
   padding: "10px",
-  overflow: "hidden",
+  //overflow: "hidden",
 };
 
 const imgStyle = {
@@ -154,17 +148,18 @@ const Home = () => {
               style={{ display: "flex", justifyContent: "center" }}
             >
               <Card
-                hoverable
+                hoverable={false}
                 style={{
                   width: "100%",
-                  border: "none",
+                  border: "0px",
                   outline: "none",
                   //boxShadow: "none",
                   maxWidth: 320,
                   backgroundColor: bgColors[index],
                   borderRadius: "8px",
-                  backdropFilter: "blur(10px)", // isteğe bağlı: cam efekti
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
+                  //backdropFilter: "blur(19px)", // isteğe bağlı: cam efekti
+                 boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2) !important"
+
                 }}
                 bodyStyle={{ padding: "2rem" }}
                 onMouseEnter={handleMouseEnter}

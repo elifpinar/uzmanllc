@@ -69,8 +69,10 @@ const HeaderBar = () => {
             src="logos/uzmanllclogo.png"
             alt="Logo"
             style={{
+              
               maxHeight: "200px",
               width: "auto",
+              maxWidth:"200%", // mobildeki sağdaki beyaz boşluğu engellemek için 
               objectFit: "contain",
             }}
           />
