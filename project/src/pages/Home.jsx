@@ -14,31 +14,61 @@ const cardData = [
   {
     title: "Kart 2",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/jaltest_logo_1.png",
+    image: "/logos/jaltestlogo.png",
     link: "https://www.jaltestturkiye.com/",
   },
   {
     title: "Kart 3",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/agvtechniclogo.png",
+    image: "/logos/agvlogo.png",
     link: "https://www.agvtechnic.com.tr/",
   },
   {
     title: "Kart 4",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/allynav_turkiye_logo-03.png",
+    image: "/logos/allynavturkiyelogo.png",
     link: "https://www.allynavturkiye.com/",
   },
   {
     title: "Kart 5",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/uznavlogo1.png",
+    image: "/logos/uznavlogo.png",
     link: "https://www.uznav.com/",
   },
   {
     title: "Kart 6",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/naubilis-1.png",
+    image: "/logos/naubilislogo.png",
+    link: "http://www.naubilis.com/",
+  },
+  {
+    title: "Kart 7",
+    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    image: "/logos/expertlogo.png",
+    link: "http://www.naubilis.com/",
+  },
+  {
+    title: "Kart 8",
+    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    image: "/logos/uzmansigortalogo.png",
+    link: "http://www.naubilis.com/",
+  },
+  {
+    title: "Kart 9",
+    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    image: "/logos/temlogo.png",
+    link: "http://www.naubilis.com/",
+  },
+  {
+    title: "Kart 10",
+    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    image: "/logos/doktormarinlogo.png",
+    link: "http://www.naubilis.com/",
+  },
+  {
+    title: "Kart 10",
+    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    image: "/logos/uzmandanismanliklogo.png",
     link: "http://www.naubilis.com/",
   },
 ];
@@ -99,7 +129,7 @@ const Home = () => {
   };
 
   return (
-    <div style={{ padding: "1rem", backgroundColor: "white", minHeight: "auto" }}>
+    <div style={{ padding: "0rem", backgroundColor: "#F0ECE5", minHeight: "auto" }}>
       <div
         style={{
           backgroundImage: "url('/logos/background8.png')",
@@ -117,8 +147,8 @@ const Home = () => {
             <Col
               key={index}
               xs={24}
-              sm={12}
-              md={8}
+              sm={24}
+              md={12}
               lg={8}
               xl={6}
               style={{ display: "flex", justifyContent: "center" }}
@@ -129,12 +159,12 @@ const Home = () => {
                   width: "100%",
                   border: "none",
                   outline: "none",
-                  boxShadow: "none",
+                  //boxShadow: "none",
                   maxWidth: 320,
                   backgroundColor: bgColors[index],
                   borderRadius: "8px",
-                backdropFilter: "blur(10px)", // isteğe bağlı: cam efekti
-                  //boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                  backdropFilter: "blur(10px)", // isteğe bağlı: cam efekti
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
                 }}
                 bodyStyle={{ padding: "2rem" }}
                 onMouseEnter={handleMouseEnter}
@@ -154,9 +184,9 @@ const Home = () => {
                   {/* <Title level={5} style={{ textAlign: "center", margin: 0 }}>
                     {card.title}
                   </Title> */}
-                  <Button color="default" variant="filled">
+                  {/* <Button color="default" variant="filled">
                     Daha Fazla
-                  </Button>
+                  </Button> */}
                 </Space>
               </Card>
             </Col>

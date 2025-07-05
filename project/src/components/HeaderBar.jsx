@@ -66,10 +66,10 @@ const HeaderBar = () => {
           onClick={() => navigate("/")}
         >
           <img
-            src="logos/uzmanllc2.png"
+            src="logos/uzmanllclogo.png"
             alt="Logo"
             style={{
-              maxHeight: "100px",
+              maxHeight: "200px",
               width: "auto",
               objectFit: "contain",
             }}
