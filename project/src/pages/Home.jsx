@@ -20,7 +20,7 @@ const cardData = [
   {
     title: "Kart 3",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/AGV-TECHNIC-LOGO-1-1.png",
+    image: "/logos/agvtechniclogo.png",
     link: "https://www.agvtechnic.com.tr/",
   },
   {
@@ -32,7 +32,7 @@ const cardData = [
   {
     title: "Kart 5",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/uznav-logo-2.png",
+    image: "/logos/uznavlogo1.png",
     link: "https://www.uznav.com/",
   },
   {
