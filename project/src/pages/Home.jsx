@@ -69,7 +69,7 @@ const cardData = [
 
 const imgContainerStyle = {
   width: "100%",
-  height: "140px",
+  height: "180px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -126,7 +126,7 @@ const Home = () => {
     <div style={{ padding: "0rem", backgroundColor: "#F0ECE5", minHeight: "auto" }}>
       <div
         style={{
-          backgroundImage: "url('/logos/background8.png')",
+          backgroundImage: "url('/logos/background2.jpg')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -155,9 +155,10 @@ const Home = () => {
                   outline: "none",
                   //boxShadow: "none",
                   maxWidth: 320,
-                  backgroundColor: bgColors[index],
+                 backgroundColor: bgColors[index], //her birinin rengine göre 
+                 //backgroundColor:"transparent",
                   borderRadius: "8px",
-                  //backdropFilter: "blur(19px)", // isteğe bağlı: cam efekti
+                //backdropFilter: "blur(3px)", // isteğe bağlı: cam efekti
                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2) !important"
 
                 }}

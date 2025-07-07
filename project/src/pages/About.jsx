@@ -5,7 +5,7 @@ const { Title, Paragraph } = Typography;
 
 function About() {
   return (
-    <div style={{ padding: "40px" }}>
+    <div style={{ padding: "2rem", backgroundColor: "#F0ECE5", minHeight: "auto" }}>
       <Title level={2}>Hakkımızda</Title>
 
       <Paragraph type="secondary">

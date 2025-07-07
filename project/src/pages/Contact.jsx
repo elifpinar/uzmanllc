@@ -10,7 +10,7 @@ const { Title, Text } = Typography;
 
 function Contact() {
   return (
-    <div style={{ padding: "40px" }}>
+    <div  style={{ padding: "2rem", backgroundColor: "#F0ECE5", minHeight: "auto" }}>
       <Title level={2}>İletişim</Title>
       <Text>Bize aşağıdaki bilgilerden ulaşabilirsiniz.</Text>
 
