@@ -12,10 +12,22 @@ const cardData = [
     link: "https://www.uzmandizel.com.tr/",
   },
   {
-    title: "Kart 2",
+    title: "Kart 5",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/jaltestlogo.png",
-    link: "https://www.jaltestturkiye.com/",
+    image: "/logos/uznavlogo.png",
+    link: "https://www.uznav.com/",
+  },
+  {
+    title: "Kart 8",
+    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    image: "/logos/uzmansigortalogo.png",
+    link: "http://www.naubilis.com/",
+  },
+  {
+    title: "Kart 8",
+    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    image: "/logos/uzmandanismanliklogo.png",
+    link: "http://www.naubilis.com/",
   },
   {
     title: "Kart 3",
@@ -24,17 +36,19 @@ const cardData = [
     link: "https://www.agvtechnic.com.tr/",
   },
   {
+    title: "Kart 2",
+    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    image: "/logos/jaltestlogo.png",
+    link: "https://www.jaltestturkiye.com/",
+  },
+  
+  {
     title: "Kart 4",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
     image: "/logos/allynavturkiyelogo.png",
     link: "https://www.allynavturkiye.com/",
   },
-  {
-    title: "Kart 5",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/uznavlogo.png",
-    link: "https://www.uznav.com/",
-  },
+  
   {
     title: "Kart 6",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
@@ -47,12 +61,7 @@ const cardData = [
     image: "/logos/expertlogo.png",
     link: "http://www.naubilis.com/",
   },
-  {
-    title: "Kart 8",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/uzmansigortalogo.png",
-    link: "http://www.naubilis.com/",
-  },
+  
   {
     title: "Kart 9",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
