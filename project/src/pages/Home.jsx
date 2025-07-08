@@ -1,108 +1,90 @@
 import React, { useState } from "react";
-import { Row, Col, Card, Typography, Button, Space } from "antd";
+import { Row, Col, Card, Typography, Space, Modal } from "antd";
 import ColorThief from "colorthief";
+import { ModalDoktorMarin, ModalExpert, ModalAllynavTurkiye, ModalUzmanGrupDanismanlik,ModalUzmanGroupSigorta } from "../components/modals";
 
 const { Title } = Typography;
 
 const cardData = [
   {
-    title: "Kart 1",
+    title: "Uzman Otomativ Sistemleri",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
     image: "/logos/uzmanAutomotive1.png",
     link: "https://www.uzmandizel.com.tr/",
   },
   {
-    title: "Kart 5",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    title: "Uznav Otomatik Dümenleme Sistemleri",
+    description: "Uznav Otomatik Dümenleme Sistemleri",
     image: "/logos/uznavlogo.png",
     link: "https://www.uznav.com/",
   },
   {
-    title: "Kart 8",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    title: "Uzman Grup Sigorta ",
+    description: "Uzman Grup Sigorta",
     image: "/logos/uzmansigortalogo.png",
-    link: "http://www.naubilis.com/",
+    modalComponent: ModalUzmanGroupSigorta,
   },
   {
-    title: "Kart 8",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    title: "Uzman Grup Danışmanlık",
+    description: "Uzman Grup Danışmanlık",
     image: "/logos/uzmandanismanliklogo.png",
-    link: "http://www.naubilis.com/",
+    modalComponent: ModalUzmanGrupDanismanlik,
   },
   {
-    title: "Kart 3",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    title: "AGV Technic",
+    description: "AGV Technic",
     image: "/logos/agvlogo.png",
     link: "https://www.agvtechnic.com.tr/",
   },
   {
-    title: "Kart 2",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    title: "Jaltest Türkiye",
+    description: "Jaltest Türkiye",
     image: "/logos/jaltestlogo.png",
     link: "https://www.jaltestturkiye.com/",
   },
-  
   {
-    title: "Kart 4",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/allynavturkiyelogo.png",
-    link: "https://www.allynavturkiye.com/",
+    title: "TEM Traktör Ekspertiz Merkezi",
+    description: "TEM Traktör Ekspertiz Merkezi",
+    image: "/logos/temlogo.png",
+    link: "https://temeks.com/",
   },
-  
   {
-    title: "Kart 6",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    title: "Allynav Türkiye",
+    description: "Allynav Türkiye",
+    image: "/logos/allynavturkiyelogo.png",
+    modalComponent: ModalAllynavTurkiye
+  },
+  {
+    title: "XTool Türkiye",
+    description: "XTool Türkiye",
+    image: "/logos/xtoollogo.png",
+    link: "https://www.xtoolturkiye.com/",
+  },
+  {
+    title: "NauBilis",
+    description: "NauBilis",
     image: "/logos/naubilislogo.png",
     link: "http://www.naubilis.com/",
   },
   {
-    title: "Kart 7",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    title: "Expert Smart Agriculture Solutions",
+    description: "Expert Smart Agriculture Solutions",
     image: "/logos/expertlogo.png",
-    link: "http://www.naubilis.com/",
-  },
-  
-  {
-    title: "Kart 9",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/temlogo.png",
-    link: "http://www.naubilis.com/",
+    
+     modalComponent: ModalExpert,
   },
   {
-    title: "Kart 10",
-    description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
+    title: "Doktor Marin",
+    description: "Doktor Marin",
     image: "/logos/doktormarinlogo.png",
-    link: "http://www.naubilis.com/",
+    modalComponent: ModalDoktorMarin,
   },
 ];
 
-const imgContainerStyle = {
-  width: "100%",
-  height: "180px",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  padding: "10px",
-  //overflow: "hidden",
-};
-
-const imgStyle = {
-  width: "100%",
-  height: "100%",
-  objectFit: "contain",
-  transition: "transform 0.4s ease",
-};
-
-// RGB'den RGBA şeffaf renk üretici
-function mixWithWhite(r, g, b, weight = 0.85, alpha = 0.5) {
-  const newR = Math.round(r + (255 - r) * weight);
-  const newG = Math.round(g + (255 - g) * weight);
-  const newB = Math.round(b + (255 - b) * weight);
-  return `rgba(${newR}, ${newG}, ${newB}, ${alpha})`;
-}
-
 const Home = () => {
   const [bgColors, setBgColors] = useState(Array(cardData.length).fill("rgba(255, 255, 255, 0.5)"));
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [SelectedModalComponent, setSelectedModalComponent] = useState(null);
 
   const handleMouseEnter = (e) => {
     e.currentTarget.querySelector("img").style.transform = "scale(1.1)";
@@ -131,6 +113,15 @@ const Home = () => {
     }
   };
 
+  const handleImageClick = (card) => {
+    if (card.modalComponent) {
+      setSelectedModalComponent(() => card.modalComponent);
+      setIsModalVisible(true);
+    } else if (card.link) {
+      window.open(card.link, "_blank");
+    }
+  };
+
   return (
     <div style={{ padding: "0rem", backgroundColor: "#F0ECE5", minHeight: "auto" }}>
       <div
@@ -140,7 +131,6 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           padding: "2rem",
-          borderRadius: "1px",
           maxWidth: "2300px",
           margin: "0 auto",
         }}
@@ -161,45 +151,52 @@ const Home = () => {
                 style={{
                   width: "100%",
                   border: "0px",
-                  outline: "none",
-                  //boxShadow: "none",
                   maxWidth: 320,
-                 backgroundColor: bgColors[index], //her birinin rengine göre 
-                 //backgroundColor:"transparent",
+                  backgroundColor: bgColors[index],
                   borderRadius: "8px",
-                //backdropFilter: "blur(3px)", // isteğe bağlı: cam efekti
-                 boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2) !important"
-
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
                 }}
                 bodyStyle={{ padding: "2rem" }}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
                 <Space direction="vertical" size="middle" align="center" style={{ width: "100%" }}>
-                  <div style={imgContainerStyle}>
+                  <div style={{ width: "100%", height: "180px", display: "flex", justifyContent: "center", alignItems: "center", padding: "10px" }}>
                     <img
                       src={card.image}
                       alt={card.title}
-                      style={imgStyle}
+                      style={{ width: "100%", height: "100%", objectFit: "contain", transition: "transform 0.4s ease" }}
                       crossOrigin="anonymous"
                       onLoad={(e) => handleImageLoad(index, e)}
-                      onClick={() => window.open(card.link, "_blank")}
+                      onClick={() => handleImageClick(card)}
                     />
                   </div>
-                  {/* <Title level={5} style={{ textAlign: "center", margin: 0 }}>
-                    {card.title}
-                  </Title> */}
-                  {/* <Button color="default" variant="filled">
-                    Daha Fazla
-                  </Button> */}
                 </Space>
               </Card>
             </Col>
           ))}
         </Row>
       </div>
+
+      {/* Modal gösterimi */}
+      <Modal
+        open={isModalVisible}
+        onCancel={() => setIsModalVisible(false)}
+        footer={null}
+        width={800}
+      >
+        {SelectedModalComponent && <SelectedModalComponent />}
+      </Modal>
     </div>
   );
 };
+
+// RGB'den RGBA şeffaf renk üretici
+function mixWithWhite(r, g, b, weight = 0.85, alpha = 0.5) {
+  const newR = Math.round(r + (255 - r) * weight);
+  const newG = Math.round(g + (255 - g) * weight);
+  const newB = Math.round(b + (255 - b) * weight);
+  return `rgba(${newR}, ${newG}, ${newB}, ${alpha})`;
+}
 
 export default Home;

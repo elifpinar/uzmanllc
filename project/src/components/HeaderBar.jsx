@@ -50,6 +50,7 @@ const HeaderBar = () => {
           zIndex: 1000,
           height: 120,
           backgroundColor: "#F0ECE5",
+
         }}
       >
         {/* Sol alan: boş, ama flex:1 */}
@@ -62,6 +63,7 @@ const HeaderBar = () => {
             display: "flex",
             justifyContent: "center",
             cursor: "pointer",
+            zIndex: 1, // Logo'yu ön plana al
           }}
           onClick={() => navigate("/")}
         >
@@ -69,10 +71,10 @@ const HeaderBar = () => {
             src="logos/uzmanllclogo.png"
             alt="Logo"
             style={{
-              
+
               maxHeight: "200px",
               width: "auto",
-              maxWidth:"200%", // mobildeki sağdaki beyaz boşluğu engellemek için 
+              maxWidth: "200%", // mobildeki sağdaki beyaz boşluğu engellemek için 
               objectFit: "contain",
             }}
           />
@@ -86,7 +88,7 @@ const HeaderBar = () => {
             justifyContent: "flex-end",
           }}
         >
-          {!screens.md && (
+          {!screens.lg && (
             <Button
               type="text"
               icon={<MenuOutlined />}
@@ -94,9 +96,11 @@ const HeaderBar = () => {
               style={{ fontSize: "24px" }}
             />
           )}
-          {screens.md && (
+          {screens.lg && (
             <Menu mode="horizontal" theme="#fffac3" items={menuItems} />
           )}
+
+
         </div>
       </Header>
 
@@ -106,8 +110,14 @@ const HeaderBar = () => {
         placement="right"
         onClose={() => setDrawerVisible(false)}
         open={drawerVisible}
+        bodyStyle={{ backgroundColor: "#F0ECE5", padding: 0 }}
+        headerStyle={{ backgroundColor: "#F0ECE5" }}
       >
-        <Menu mode="vertical" items={menuItems} theme="#fffac3" />
+        <Menu
+          mode="vertical"
+          items={menuItems}
+          style={{ backgroundColor: "#F0ECE5", borderRight: "none" }}
+        />
       </Drawer>
     </>
   );
