@@ -33,13 +33,9 @@ function About() {
             bordered={false}
           >
             <Paragraph style={{ color: "#616161" }}>
-              Müşterilerimizin ihtiyaçlarını en doğru şekilde analiz ederek, çağın gereksinimlerine uygun, yenilikçi ve sürdürülebilir hizmetler sunmak.
-              <br /><br />
-              Alanında uzman alt firmalarımızla sinerji yaratarak, çok sektörlü çözümler üretmek.
-              <br /><br />
-              Satış sonrası hizmetlerde kalite standartlarını yükselterek müşteri memnuniyetini en üst düzeye çıkarmak.
-              <br /><br />
-              Teknolojiyle bütünleşmiş bir iş modeliyle, topluma ve çevreye değer katmak.
+              Müşterilerimizin ihtiyaçlarını en doğru şekilde analiz ederek, çağın gereksinimlerine uygun, yenilikçi ve sürdürülebilir hizmetler sunmak.Alanında uzman alt firmalarımızla sinerji yaratarak, çok sektörlü çözümler üretmek.Satış sonrası hizmetlerde kalite standartlarını yükselterek müşteri memnuniyetini en üst düzeye çıkarmak.Teknolojiyle bütünleşmiş bir iş modeliyle, topluma ve çevreye değer katmak.
+           
+              
             </Paragraph>
           </Card>
         </Col>

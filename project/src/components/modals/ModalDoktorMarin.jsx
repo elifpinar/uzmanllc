@@ -25,9 +25,9 @@ const ModalDoktorMarin = () => (
         textAlign: "center",
       }}
     >
-      Bu Modal Doktor Marin'e özel
+       DoktorMarin
     </h3>
-    <p
+    {/* <p
       style={{
         color: "#000",
         backgroundColor: "rgba(255,255,255,0.7)",
@@ -36,7 +36,7 @@ const ModalDoktorMarin = () => (
       }}
     >
       Detaylı açıklama, görseller, formlar vs. eklenebilir.
-    </p>
+    </p> */}
   </div>
 );
 

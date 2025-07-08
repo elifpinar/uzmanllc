@@ -25,9 +25,9 @@ const ModalUzmanGrupDanismanlik = () => (
         textAlign: "center",
       }}
     >
-      Bu Modal Uzman Grup Danışmanlık'a özel
+      Uzman Grup Danışmanlık
     </h3>
-    <p
+    {/* <p
       style={{
         color: "#000",
         backgroundColor: "rgba(255,255,255,0.7)",
@@ -36,7 +36,7 @@ const ModalUzmanGrupDanismanlik = () => (
       }}
     >
       Detaylı açıklama, görseller, formlar vs. eklenebilir.
-    </p>
+    </p> */}
   </div>
 );
 

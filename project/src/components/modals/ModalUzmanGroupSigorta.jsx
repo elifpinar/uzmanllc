@@ -25,9 +25,9 @@ const ModalUzmanGroupSigorta = () => (
         textAlign: "center",
       }}
     >
-      Bu Modal Uzman Grup Sigorta özel
+      Uzman Grup Sigorta
     </h3>
-    <p
+    {/* <p
       style={{
         color: "#000",
         backgroundColor: "rgba(255,255,255,0.7)",
@@ -36,7 +36,7 @@ const ModalUzmanGroupSigorta = () => (
       }}
     >
       Detaylı açıklama, görseller, formlar vs. eklenebilir.
-    </p>
+    </p> */}
   </div>
 );
 
