@@ -126,9 +126,13 @@ const HeaderBar = () => {
             />
           ) : (
             <>
-              <Button type="text" onClick={() => navigate("/about")}>
+              <Button 
+              type="text" 
+              className ="custom-button" 
+              onClick={() => navigate("/about")}>
                 {t("about")}
               </Button>
+              
               <Button type="text" onClick={() => navigate("/contact")}>
                 {t("contact")}
               </Button>
