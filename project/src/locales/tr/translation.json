@@ -1,5 +1,28 @@
 {
-  "welcome": "Hoşgeldiniz",
   "about": "Hakkımızda",
-  "contact": "İletişim"
+  "contact": "İletişim",
+  "about_us_title": "Hakkımızda",
+  
+  "about_us_paragraph": "1980’lerde başlayan öğrenme tutkumuzu, 30 yılı aşkın tarım deneyimimizle birleştirerek Uzman LLC çatısı altında faaliyetlerimizi sürdürüyoruz. Kuruluşumuzdan bu yana, farklı sektörlerde uzmanlaşmış çok sayıda alt firmamızla birlikte büyümeye ve gelişmeye devam ediyoruz.\n\n“Bilgi Çağı” olarak adlandırılan bu dönemde teknolojinin işletmeler üzerindeki dönüştürücü etkisini yakından takip ediyor; otuz yılı aşan saha tecrübemizi, en güncel teknolojik altyapılarla harmanlayarak müşterilerimize yüksek katma değerli hizmetler sunuyoruz.\n\nMüşteri memnuniyetini merkeze alan hizmet anlayışımızla, yalnızca ürün ve çözüm sunmakla kalmıyor; satış sonrası destek süreçlerimizi sürekli geliştirerek kalıcı memnuniyet sağlamayı hedefliyoruz.",
+  "vision": "Vizyonumuz",
+  "vision_text": "Teknoloji ve deneyimi bir araya getirerek, farklı sektörlerde faaliyet gösteren alt şirketlerimizle birlikte global ölçekte güvenilir ve sürdürülebilir çözümler sunan lider bir grup şirketi olmak.",
+  "mission": "Misyonumuz",
+  "mission_text": "Müşterilerimizin ihtiyaçlarını en doğru şekilde analiz ederek, çağın gereksinimlerine uygun, yenilikçi ve sürdürülebilir hizmetler sunmak.Alanında uzman alt firmalarımızla sinerji yaratarak, çok sektörlü çözümler üretmek.Satış sonrası hizmetlerde kalite standartlarını yükselterek müşteri memnuniyetini en üst düzeye çıkarmak.Teknolojiyle bütünleşmiş bir iş modeliyle, topluma ve çevreye değer katmak.",
+  "team": "Ekibimiz",
+  "team_text1": "Uzman LLC ailesi, her biri kendi alanında uzman mühendislerden, saha çalışanlarından, Ar-Ge uzmanlarından ve yöneticilerden oluşan güçlü bir kadroya sahiptir.",
+  "team_text2": "Alt şirketlerimizde görev alan ekiplerimizle birlikte, sektörel farklılıkları bir zenginlik olarak görüyor, disiplinler arası bir iş birliği anlayışıyla hareket ediyoruz.",
+
+
+  "contact_title": "İletişim",
+  "contact_subtitle": "Bize aşağıdaki bilgilerden ulaşabilirsiniz.",
+  "contact_info_title": "İletişim Bilgileri",
+  "phone": "Telefon",
+  "email": "E-posta",
+  "address_1": "Adres: Şaşmaz Oto Sanayi Sitesi, Bahçekapı, 2464. Sk. No:2, 06990 Etimesgut/Ankara",
+  "address_2": "Adres: Malıköy anadolu osb mah. Dumlupınar cad. No:18, 100541 Ankara/Sincan",
+  "location_title": "Konumumuz",
+  "factory_location_title": "Malıköy Fabrika Konumumuz",
+
+  "footer":"Tüm Hakları Saklıdır."
+
 }

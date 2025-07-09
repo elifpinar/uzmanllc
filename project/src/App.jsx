@@ -29,7 +29,7 @@ const App = () => {
 >
   <Layout style={{ minHeight: "100vh" }}>
     <HeaderBar />
-    <Content style={{ padding: "2rem" }}>
+    <Content style={{ padding: "0rem" }}>
      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />

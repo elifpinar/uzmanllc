@@ -1,3 +1,26 @@
 {
+  "about": "About Us",
+  "contact": "Contact",
+  "about_us_title": "About Us",
+  "about_us_paragraph": "Combining our passion for learning that began in the 1980s with over 30 years of agricultural experience, we continue our operations under the Uzman LLC umbrella. Since our establishment, we have been growing and evolving with our numerous subsidiaries specialized in different sectors.\n\nIn this so-called 'Information Age', we closely follow the transformative impact of technology on businesses and blend our over thirty years of field experience with the most up-to-date technological infrastructures to provide high value-added services to our customers.\n\nWith a service approach centered on customer satisfaction, we not only offer products and solutions but also aim to ensure lasting satisfaction by continuously improving our after-sales support processes.",
+  "vision": "Our Vision",
+  "vision_text": "To become a leading group of companies that provides reliable and sustainable solutions on a global scale by combining technology and experience with our subsidiaries operating in various sectors.",
+  "mission": "Our Mission",
+  "mission_text": "To analyze the needs of our customers accurately and provide innovative and sustainable services that meet the requirements of the era. To create synergy with our specialized subsidiaries and produce multi-sectoral solutions. To maximize customer satisfaction by raising the quality standards in after-sales services. To contribute to society and the environment with a technology-integrated business model.",
+  "team": "Our Team",
+  "team_text1": "The Uzman LLC family consists of a strong team of engineers, field workers, R&D experts, and managers, each specialized in their respective fields.",
+  "team_text2": "Together with our teams working in our subsidiaries, we view sectoral differences as a richness and act with an interdisciplinary collaboration approach.",
+
   
+  "contact_title": "Contact",
+  "contact_subtitle": "You can reach us through the information below.",
+  "contact_info_title": "Contact Information",
+  "phone": "Phone",
+  "email": "E-mail",
+  "address_1": "Location: Şaşmaz Oto Sanayi Sitesi, Bahçekapı, 2464. Sk. No:2, 06990 Etimesgut/Ankara",
+  "address_2": "Location: Malıköy anadolu osb mah. Dumlupınar cad. No:18, 100541 Ankara/Sincan",
+  "location_title": "Our Location",
+  "factory_location_title": "Malıköy Factory Location",
+
+  "footer":"All Rights Reserved."
 }

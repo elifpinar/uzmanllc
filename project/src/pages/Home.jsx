@@ -161,7 +161,7 @@ const Home = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <Space direction="vertical" size="middle" align="center" style={{ width: "100%" }}>
-                  <div style={{ width: "100%", height: "180px", display: "flex", justifyContent: "center", alignItems: "center", padding: "10px" }}>
+                  <div style={{ width: "100%", height: "180px", display: "flex", justifyContent: "center", alignItems: "center", padding: "1px" }}>
                     <img
                       src={card.image}
                       alt={card.title}
