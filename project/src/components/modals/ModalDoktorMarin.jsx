@@ -1,4 +1,8 @@
-const ModalDoktorMarin = () => (
+
+import { useTranslation } from 'react-i18next';
+const ModalDoktorMarin = () => {
+  const { t } = useTranslation();
+  return (
   <div
     style={{
       display: "flex",
@@ -25,7 +29,7 @@ const ModalDoktorMarin = () => (
         textAlign: "center",
       }}
     >
-       DoktorMarin
+       {t('doktor_marin')}
     </h3>
     {/* <p
       style={{
@@ -39,5 +43,8 @@ const ModalDoktorMarin = () => (
     </p> */}
   </div>
 );
+
+}
+  
 
 export default ModalDoktorMarin;

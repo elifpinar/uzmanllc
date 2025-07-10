@@ -52,7 +52,8 @@ const cardData = [
     title: "Allynav Türkiye",
     description: "Allynav Türkiye",
     image: "/logos/allynavturkiyelogo.png",
-    modalComponent: ModalAllynavTurkiye
+    link:"https://www.allynavturkiye.com/",
+    //modalComponent: ModalAllynavTurkiye
   },
   {
     title: "XTool Türkiye",
@@ -70,7 +71,6 @@ const cardData = [
     title: "Expert Smart Agriculture Solutions",
     description: "Expert Smart Agriculture Solutions",
     image: "/logos/expertlogo.png",
-    
      modalComponent: ModalExpert,
   },
   {
