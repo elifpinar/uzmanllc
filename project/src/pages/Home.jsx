@@ -33,7 +33,7 @@ const cardData = [
   {
     title: "AGV Technic",
     description: "AGV Technic",
-    image: "/logos/agvlogo.png",
+    image: "/logos/agvlogo3.png",
     link: "https://www.agvtechnic.com.tr/",
   },
   {
