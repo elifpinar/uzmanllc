@@ -9,8 +9,8 @@ const ModalUzmanGroupSigorta = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "2rem",
-        gap: "1rem",
+        padding: "1.5rem",
+        gap: "0rem",
       }}
     >
       <img
@@ -32,16 +32,23 @@ const ModalUzmanGroupSigorta = () => {
       >
         {t('group_insurance')}
       </h3>
-      {/* <p
+      <p
         style={{
           color: "#000",
-          backgroundColor: "rgba(255,255,255,0.7)",
+          backgroundcolor: "rgba(255,255,255,0.7)",
           padding: "0.5rem",
-          textAlign: "center",
+          textalign: "center",
         }}
       >
-        Detaylı açıklama, görseller, formlar vs. eklenebilir.
-      </p> */}
+        <>
+  <p>{t('group_insurance_comment1')}</p>
+  <p>{t('group_insurance_comment2')}</p>
+  <p>{t('group_insurance_comment3')}</p>
+  <p>{t('group_insurance_comment4')}</p>
+  <p>{t('group_insurance_comment5')}</p>
+</>
+
+      </p>
     </div>
   );
 };

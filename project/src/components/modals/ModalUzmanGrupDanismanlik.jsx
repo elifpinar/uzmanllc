@@ -10,7 +10,7 @@ const ModalUzmanGrupDanismanlik = () => {
         flexDirection: "column",
         alignItems: "center",
         padding: "2rem",
-        gap: "1rem",
+        gap: "0rem",
       }}
     >
       <img
@@ -32,16 +32,23 @@ const ModalUzmanGrupDanismanlik = () => {
       >
         {t('uzman_group_consultancy')}
       </h3>
-      {/* <p
+      <p
         style={{
           color: "#000",
-          backgroundColor: "rgba(255,255,255,0.7)",
+          backgroundcolor: "rgba(255,255,255,0.7)",
           padding: "0.5rem",
-          textAlign: "center",
+          textalign: "center",
         }}
       >
-        Detaylı açıklama, görseller, formlar vs. eklenebilir.
-      </p> */}
+        <>
+  <p>{t('uzman_group_consultancy_comment1')}</p>
+  <p>{t('uzman_group_consultancy_comment2')}</p>
+  <p>{t('uzman_group_consultancy_comment3')}</p>
+  <p>{t('uzman_group_consultancy_comment4')}</p>
+  <p>{t('uzman_group_consultancy_comment5')}</p>
+</>
+
+      </p>
     </div>
   );
 };

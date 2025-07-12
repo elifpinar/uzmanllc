@@ -26,9 +26,24 @@
 
   "allynav":"AllyNav offers advanced technologies in agriculture with automatic tractor steering systems and agricultural robots, supporting efficiency, precision, and environmentally friendly production. Autonomous solutions provide a more sustainable and economical production model.",
 
-  "group_insurance":"Uzman Grop Insurance",
+ 
+  "group_insurance": "Uzman Group Insurance",
+  "group_insurance_comment1": "Established in October 2023, Uzman Group Insurance was founded on a solid foundation of long-standing industry experience, reliability, and a well-established business network. Our core motivation in establishing the company was to go beyond traditional retail policy sales and instead create a dynamic, trustworthy, and solution-oriented insurance structure focused on corporate clients and project-based needs.",
+  "group_insurance_comment2": "What sets Uzman Group Insurance apart is its exclusive partnership with Quick Sigorta A.Ş., one of Turkey’s most innovative and rapidly growing non-life insurance companies. Within the scope of this strategic collaboration, we offer services solely through Quick Sigorta products, enabling us to develop highly tailored, value-added insurance solutions specifically designed for corporate projects. This partnership model allows us to operate beyond the conventional agency framework and deliver customized insurance strategies for each client.",
+  "group_insurance_comment3": "Quick Sigorta A.Ş., a subsidiary of Maher Holding A.Ş., is a 100% domestic insurance company with a paid-in capital of 433,300,000 TL and total equity exceeding 3.3 billion TL. With a widespread network of agents and brokers across Turkey, and strong digital sales channels, Quick Sigorta operates in all non-life insurance segments, offering a wide range of products including Compulsory Traffic Insurance, Motor Vehicle Insurance, Fire Insurance, Transport Insurance, Personal Accident Insurance, and Marine Vehicle Insurance.",
+  "group_insurance_comment4": "Thanks to its strategic collaboration with Quick Sigorta, Uzman Group Insurance has successfully carried out numerous sector-specific, project-based initiatives — including marine expertise services and agricultural vehicle test center projects. These tailored collaborations allow us to deepen our expertise and offer bespoke models rather than generic insurance solutions.",
+  "group_insurance_comment5": "Our mission is to move beyond being a policy provider and act as a true business partner, offering clients long-term, strategic collaborations through risk management, project consultancy, and sustainable insurance models. Backed by our strong corporate structure, solution-oriented project approach, and exclusive relationship with Quick Sigorta, we proudly deliver a premium insurance experience that distinguishes us in the industry.",
 
-  "uzman_group_consultancy":"Uzman Group Consultancy ",
+
+
+  "uzman_group_consultancy": "Uzman Group Consultancy",
+  "uzman_group_consultancy_comment1": "Uzman Group Consulting was founded in 2022 under the umbrella of Uzman LLC with the goal of delivering strategic consultancy services to companies operating in both domestic and international markets. We offer end-to-end support in areas such as incentive and grant consulting, import-export operations, market research, product sourcing, and business development strategies.",
+  "uzman_group_consultancy_comment2": "Our consulting model is built not only on theoretical guidance but also on field-based, practical implementation and on-site diagnostics. With a customized approach that addresses the unique conditions of each business, we support companies aiming for sustainable growth.",
+  "uzman_group_consultancy_comment3": "We specialize in developing applicable, result-oriented, and measurable solutions, particularly for small and medium-sized enterprises. Our services span a wide range of areas—from incentive and grant applications to supply chain optimization, foreign trade strategies, and investment feasibility studies.",
+  "uzman_group_consultancy_comment4": "Committed to expertise, confidentiality, and trust, we also support companies aiming to expand into international markets by offering consulting on foreign trade regulations, partner identification, and market entry strategies.",
+  "uzman_group_consultancy_comment5": "With a strong corporate structure, extensive field experience, and multi-sector knowledge, Uzman Group Consulting is a reliable business partner helping companies move confidently toward the future.",
+
+
 
   "doktor_marin":" Doktor Marin Page"
 }
