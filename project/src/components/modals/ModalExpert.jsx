@@ -9,7 +9,8 @@ const ModalExpert = () => (
     }}
   >
     <img
-      src="/logos/expertlogo.png"
+      src="/logos/expertlogo.webp"
+      loading="lazy"
       alt="Expert Logo"
       style={{
         width: "120px", // boyutu ihtiyacına göre ayarlayabilirsin

@@ -14,7 +14,8 @@ const ModalUzmanGroupSigorta = () => {
       }}
     >
       <img
-        src="/logos/uzmansigortalogo.png"
+        src="/logos/uzmansigortalogo.webp"
+        loading="lazy"
         alt="Uzman Grup Sigorta Logo"
         style={{
           width: "120px",

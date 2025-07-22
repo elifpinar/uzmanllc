@@ -13,7 +13,8 @@ const ModalDoktorMarin = () => {
     }}
   >
     <img
-      src="/logos/doktormarinlogo.png"
+      src="/logos/doktormarinlogo.webp"
+      loading="lazy"
       alt="Doktor Marin Logo"
       style={{
         width: "120px", // boyutu ihtiyacına göre ayarlayabilirsin

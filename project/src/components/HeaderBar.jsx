@@ -94,7 +94,8 @@ const HeaderBar = () => {
           onClick={() => navigate("/")}
         >
           <img
-            src="logos/uzmanllclogo.png"
+            src="logos/uzmanllclogo.webp"
+            loading="lazy"
             alt="Logo"
             style={{
               maxHeight: "100px",

@@ -14,7 +14,8 @@ const ModalUzmanGrupDanismanlik = () => {
       }}
     >
       <img
-        src="/logos/uzmandanismanliklogo.png"
+        src="/logos/uzmandanismanliklogo.webp"
+        loading="lazy"
         alt="Uzman Grup Danışmanlık Logo"
         style={{
           width: "120px",

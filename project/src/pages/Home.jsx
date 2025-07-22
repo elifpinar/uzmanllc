@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, Suspense  } from "react";
 import { Row, Col, Card, Typography, Space, Modal } from "antd";
 import ColorThief from "colorthief";
-import { ModalDoktorMarin, ModalExpert, ModalAllynavTurkiye, ModalUzmanGrupDanismanlik,ModalUzmanGroupSigorta } from "../components/modals";
+// React.lazy ile modal bileşenleri dinamik yükleniyor:
+const ModalDoktorMarin = React.lazy(() => import('../components/modals/ModalDoktorMarin'));  // lazy import - 1
+const ModalExpert = React.lazy(() => import('../components/modals/ModalExpert'));              // lazy import - 2
+const ModalAllynavTurkiye = React.lazy(() => import('../components/modals/ModalAllynavTurkiye'));
+const ModalUzmanGrupDanismanlik = React.lazy(() => import('../components/modals/ModalUzmanGrupDanismanlik'));
+const ModalUzmanGroupSigorta = React.lazy(() => import('../components/modals/ModalUzmanGroupSigorta'));
 
 const { Title } = Typography;
 
@@ -9,74 +14,74 @@ const cardData = [
   {
     title: "Uzman Otomativ Sistemleri",
     description: "Uzman Dizel Pompa ve Enjektör Sistemleri",
-    image: "/logos/uzmanAutomotive1.png",
+    image: "/logos/uzmanAutomotive.webp",
     link: "https://www.uzmandizel.com.tr/",
   },
   {
     title: "Uznav Otomatik Dümenleme Sistemleri",
     description: "Uznav Otomatik Dümenleme Sistemleri",
-    image: "/logos/uznavlogo.png",
+    image: "/logos/uznavlogo.webp",
     link: "https://www.uznav.com/",
   },
   {
     title: "Uzman Grup Sigorta ",
     description: "Uzman Grup Sigorta",
-    image: "/logos/uzmansigortalogo.png",
+    image: "/logos/uzmansigortalogo.webp",
     modalComponent: ModalUzmanGroupSigorta,
   },
   {
     title: "Uzman Grup Danışmanlık",
     description: "Uzman Grup Danışmanlık",
-    image: "/logos/uzmandanismanliklogo.png",
+    image: "/logos/uzmandanismanliklogo.webp",
     modalComponent: ModalUzmanGrupDanismanlik,
   },
   {
     title: "AGV Technic",
     description: "AGV Technic",
-    image: "/logos/agvlogo3.png",
+    image: "/logos/agvlogo3.webp",
     link: "https://www.agvtechnic.com.tr/",
   },
   {
     title: "Jaltest Türkiye",
     description: "Jaltest Türkiye",
-    image: "/logos/jaltestlogo.png",
+    image: "/logos/jaltestlogo.webp",
     link: "https://www.jaltestturkiye.com/",
   },
   {
     title: "TEM Traktör Ekspertiz Merkezi",
     description: "TEM Traktör Ekspertiz Merkezi",
-    image: "/logos/temlogo.png",
+    image: "/logos/temlogo.webp",
     link: "https://temeks.com/",
   },
   {
     title: "Allynav Türkiye",
     description: "Allynav Türkiye",
-    image: "/logos/allynavturkiyelogo.png",
+    image: "/logos/allynavturkiyelogo.webp",
     link:"https://www.allynavturkiye.com/",
     //modalComponent: ModalAllynavTurkiye
   },
   {
     title: "XTool Türkiye",
     description: "XTool Türkiye",
-    image: "/logos/xtoollogo.png",
+    image: "/logos/xtoollogo.webp",
     link: "https://www.xtoolturkiye.com/",
   },
   {
     title: "NauBilis",
     description: "NauBilis",
-    image: "/logos/naubilislogo.png",
+    image: "/logos/naubilislogo.webp",
     link: "http://www.naubilis.com/",
   },
   {
     title: "Expert Smart Agriculture Solutions",
     description: "Expert Smart Agriculture Solutions",
-    image: "/logos/expertlogo.png",
+    image: "/logos/expertlogo.webp",
      modalComponent: ModalExpert,
   },
   {
     title: "Doktor Marin",
     description: "Doktor Marin",
-    image: "/logos/doktormarinlogo.png",
+    image: "/logos/doktormarinlogo.webp",
     modalComponent: ModalDoktorMarin,
   },
 ];
@@ -126,7 +131,7 @@ const Home = () => {
     <div style={{ padding: "0rem", backgroundColor: "#F0ECE5", minHeight: "auto" }}>
       <div
         style={{
-          backgroundImage: "url('/logos/background2.jpg')",
+          backgroundImage: "url('/logos/background2.webp')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -165,6 +170,7 @@ const Home = () => {
                     <img
                       src={card.image}
                       alt={card.title}
+                       loading="lazy"
                       style={{ width: "100%", height: "100%", objectFit: "contain", transition: "transform 0.4s ease" }}
                       crossOrigin="anonymous"
                       onLoad={(e) => handleImageLoad(index, e)}
@@ -185,7 +191,9 @@ const Home = () => {
         footer={null}
         width={800}
       >
-        {SelectedModalComponent && <SelectedModalComponent />}
+        <Suspense fallback={null}> {/* Suspense ile lazy yüklemeyi sarmaladı */}
+          {SelectedModalComponent && <SelectedModalComponent />}
+        </Suspense>
       </Modal>
     </div>
   );

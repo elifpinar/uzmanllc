@@ -14,7 +14,8 @@ const ModalAllynavTurkiye = () => {
       }}
     >
       <img
-        src="/logos/allynavturkiyelogo.png"
+        src="/logos/allynavturkiyelogo.webp"
+        loading="lazy"
         alt="Allynav Türkiye Logo"
         style={{
           width: "120px",

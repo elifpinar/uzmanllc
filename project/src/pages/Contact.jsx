@@ -26,7 +26,7 @@ function Contact() {
                 <PhoneOutlined /> {t('phone')}: <a href="tel:+905551112233" style={{ color: "#616161" }}> (0312) 278 32 32</a>
               </Text>
               <Text style={{ color: "#616161" }}>
-                <MailOutlined /> {t('email')}: <a href="mailto:info@example.com" style={{ color: "#616161" }}>info@example.com</a>
+                <MailOutlined /> {t('email')}: <a href="mailto:info@uzmanllc.com" style={{ color: "#616161" }}>info@uzmanllc.com</a>
               </Text>
               <Text style={{ color: "#616161" }}>
                 <EnvironmentOutlined /> {t('address_1')}
