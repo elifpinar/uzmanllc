@@ -1,17 +1,20 @@
-# My Project
+# 🚀 React + Vite + Ant Design Project
 
-This project is built with **Vite**, **React**, and **Ant Design**.
+This project is built with **React**, **Vite**, and **Ant Design (AntD)** for a fast, modern, and elegant UI development experience.
 
-## Features
+## 🛠️ Tech Stack
+- ⚛️ **React** — Frontend library  
+- ⚡ **Vite** — Next-generation build tool  
+- 🎨 **Ant Design** — UI components and design system  
 
-- Modern React setup with Vite for lightning-fast development
-- Ant Design components for sleek UI
-- Responsive and clean design
-- Lazy-loaded routes for better performance
+## 📦 Installation
 
-## Getting Started
+```bash
+npm install
 
-### Prerequisites
 
-Make sure you have **Node.js** and **npm** installed on your machine.
+## Run the Project
 
+Start the development server with:
+
+npm run dev
