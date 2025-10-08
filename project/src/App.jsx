@@ -1,12 +1,12 @@
 import React, { Suspense, lazy } from "react";
-import { Layout, ConfigProvider, theme as antdTheme } from "antd";
+import { Layout, ConfigProvider, theme as antdTheme, Spin } from "antd";
 import HeaderBar from "./components/HeaderBar";
 import FooterBar from "./components/FooterBar";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
 const { Content } = Layout;
 
-// 💤 Lazy yüklenen sayfa bileşenleri
+// Lazy yüklenen sayfa bileşenleri
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -30,7 +30,20 @@ const App = () => {
       <Layout style={{ minHeight: "100vh" }}>
         <HeaderBar />
         <Content style={{ padding: "0rem" }}>
-          <Suspense fallback={<div>Yükleniyor...</div>}>
+          <Suspense
+            fallback={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "80vh",
+                }}
+              >
+                <Spin size="small"  />
+              </div>
+            }
+          >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -43,5 +56,4 @@ const App = () => {
     </ConfigProvider>
   );
 };
-
 export default App;

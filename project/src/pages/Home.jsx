@@ -1,4 +1,4 @@
-import React, { useState, Suspense  } from "react";
+import React, { useState, Suspense } from "react";
 import { Row, Col, Card, Typography, Space, Modal } from "antd";
 import ColorThief from "colorthief";
 // React.lazy ile modal bileşenleri dinamik yükleniyor:
@@ -57,7 +57,7 @@ const cardData = [
     title: "Allynav Türkiye",
     description: "Allynav Türkiye",
     image: "/logos/allynavturkiyelogo.webp",
-    link:"https://www.allynavturkiye.com/",
+    link: "https://www.allynavturkiye.com/",
     //modalComponent: ModalAllynavTurkiye
   },
   {
@@ -76,7 +76,7 @@ const cardData = [
     title: "Expert Smart Agriculture Solutions",
     description: "Expert Smart Agriculture Solutions",
     image: "/logos/expertlogo.webp",
-     modalComponent: ModalExpert,
+    modalComponent: ModalExpert,
   },
   {
     title: "Doktor Marin",
@@ -160,8 +160,11 @@ const Home = () => {
                   backgroundColor: bgColors[index],
                   borderRadius: "8px",
                   boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+
                 }}
-                bodyStyle={{ padding: "2rem" }}
+                styles={{
+                  body: { padding: "2rem" }
+                }}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -170,7 +173,7 @@ const Home = () => {
                     <img
                       src={card.image}
                       alt={card.title}
-                       loading="lazy"
+                      loading="lazy"
                       style={{ width: "100%", height: "100%", objectFit: "contain", transition: "transform 0.4s ease" }}
                       crossOrigin="anonymous"
                       onLoad={(e) => handleImageLoad(index, e)}

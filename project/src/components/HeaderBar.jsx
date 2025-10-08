@@ -102,8 +102,8 @@ const HeaderBar = () => {
               width: "auto",
               maxWidth: "200%",
               objectFit: "contain",
-               transform: "scale(1.3)", // 💡 logo görsel olarak büyür
-    transformOrigin: "center", // ortalanarak büyüsün
+              transform: "scale(1.3)", // 💡 logo görsel olarak büyür
+              transformOrigin: "center", // ortalanarak büyüsün
             }}
           />
         </div>
@@ -127,13 +127,13 @@ const HeaderBar = () => {
             />
           ) : (
             <>
-              <Button 
-              type="text" 
-              className ="custom-button" 
-              onClick={() => navigate("/about")}>
+              <Button
+                type="text"
+                className="custom-button"
+                onClick={() => navigate("/about")}>
                 {t("about")}
               </Button>
-              
+
               <Button type="text" onClick={() => navigate("/contact")}>
                 {t("contact")}
               </Button>
@@ -148,8 +148,10 @@ const HeaderBar = () => {
         placement="right"
         onClose={() => setDrawerVisible(false)}
         open={drawerVisible}
-        bodyStyle={{ backgroundColor: "#F0ECE5", padding: 0 }}
-        headerStyle={{ backgroundColor: "#F0ECE5" }}
+        styles={{
+          body: { backgroundColor: "#F0ECE5", padding: 0 },
+          header: { backgroundColor: "#F0ECE5" },
+        }}
       >
         <Menu
           mode="vertical"
